@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="./css/style.css" />
+
+        <!-- UIkit CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css"
+        />
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
+            integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <title>Publications</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+                <div class="uk-navbar">
+                    <div class="uk-navbar-left">
+                        <a
+                            class="uk-navbar-item uk-logo"
+                            href="#"
+                            aria-label="Back to Home"
+                            >Logo</a
+                        >
+                    </div>
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="./about.html">About Us</a></li>
+                            <li>
+                                <a href="./publications.html">Publications</a>
+                            </li>
+                            <li><a href="#">Research</a></li>
+                            <li><a href="./contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="data"></div>
+        <div id="pagination"></div>
+
+        <script>
+            const jsonData = [
+                { id: 1, name: "John" },
+                { id: 2, name: "Jane" },
+                { id: 3, name: "Bob" },
+                { id: 4, name: "Alice" },
+                { id: 5, name: "Eve" },
+                { id: 6, name: "Alex" },
+                { id: 7, name: "Dan" },
+                { id: 8, name: "Sara" },
+                { id: 9, name: "Tom" },
+                { id: 10, name: "Tim" },
+            ];
+
+            function displayData(pageNum) {
+                const itemsPerPage = 3;
+                const startIndex = (pageNum - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const data = jsonData.slice(startIndex, endIndex);
+
+                const dataHtml = data
+                    .map((item) => {
+                        return `<div>${item.id} - ${item.name}</div>`;
+                    })
+                    .join("");
+
+                document.getElementById("data").innerHTML = dataHtml;
+            }
+
+            function displayPagination() {
+                const itemsPerPage = 3;
+                const totalPages = Math.ceil(jsonData.length / itemsPerPage);
+
+                const paginationHtml = Array.from(
+                    { length: totalPages },
+                    (_, i) => {
+                        return `<button>${i + 1}</button>`;
+                    }
+                ).join("");
+
+                document.getElementById("pagination").innerHTML =
+                    paginationHtml;
+
+                document
+                    .querySelectorAll("#pagination button")
+                    .forEach((button) => {
+                        button.addEventListener("click", () => {
+                            const pageNum = parseInt(button.textContent);
+                            displayData(pageNum);
+                        });
+                    });
+
+                displayData(1);
+            }
+
+            displayPagination();
+        </script>
+    </body>
+</html>
