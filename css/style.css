@@ -5,13 +5,40 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #eee;
+}
 .cover_cont {
-    width: "10px";
     height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    background-image: linear-gradient(to bottom right, #002f4b, #000);
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .uk-logo img {
     display: block;
     max-height: 3rem;
     margin-right: 1.5rem;
+}
+
+.cover-head {
+    font-size: 5rem;
+    /* margin: 0; */
+    z-index: 10;
+    color: white !important;
+    position: relative;
 }
