@@ -4,3 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.cover_cont {
+    width: "10px";
+    height: 70vh;
+}
+
+.uk-logo img {
+    display: block;
+    max-height: 3rem;
+    margin-right: 1.5rem;
+}
