@@ -28,7 +28,7 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="uk-navbar-container">
+        <nav class="uk-navbar-container" uk-sticky>
             <div class="uk-container">
                 <div uk-navbar>
                     <div class="uk-navbar-left">
@@ -60,7 +60,7 @@
             </div>
         </nav>
 
-        <div class="uk-cover-container cover_cont">
+        <div class="uk-cover-container cover_cont" tabindex="0">
             <video
                 src="./videos/cover2.mp4"
                 autoplay
@@ -69,8 +69,284 @@
                 playsinline
                 uk-cover
             ></video>
+            <div class="overlay"></div>
+            <div
+                class="uk-container uk-flex uk-flex-column uk-flex-center uk-flex-middle"
+            >
+                <div class="uk-animation-toggle" tabindex="0">
+                    <img
+                        class="uk-animation-stroke"
+                        src="images/learning-machine-ai-icon.svg"
+                        width="3rem"
+                        height="3rem"
+                        style="color: white"
+                        uk-svg="stroke-animation: true"
+                    />
+                </div>
+                <h1
+                    class="cover-head uk-text-uppercase uk-text-bold uk-animation-fade"
+                >
+                    Machine Learning
+                </h1>
+                <h1 class="cover-head uk-text-uppercase uk-text-bold">
+                    Laboratory
+                </h1>
+            </div>
         </div>
-        <div class="uk-container">
+        <div class="uk-container uk-padding-small">
+            <div class="uk-card uk-card-default uk-margin-bottom">
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Heading</h3>
+                </div>
+            </div>
+            <div
+                class="uk-grid-small uk-child-width-1-3@m uk-flex uk-flex-wrap"
+                uk-grid="masonry:true"
+            >
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top uk-padding-small">
+                            <img
+                                src="images/tm3.jpg"
+                                width="1800"
+                                height="1200"
+                                alt=""
+                            />
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Media Top</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Tenetur, error
+                                odio expedita et nisi commodi repudiandae, in a
+                                aliquam libero ratione iste consectetur! Aliquam
+                                ratione mollitia eaque, soluta doloremque
+                                quidem. Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Dolorem nam tempore quo itaque
+                                illo sunt porro commodi quisquam pariatur neque
+                                unde nulla odit recusandae velit, expedita esse!
+                                Minima, quod tempora. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Natus, cum amet
+                                ipsa quis, iusto voluptates nulla explicabo
+                                provident sunt odit suscipit. Error fugiat
+                                delectus temporibus, aperiam aspernatur
+                                quibusdam earum? Voluptatum? Lorem ipsum dolor
+                                sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <a href="#" class="uk-button uk-button-text"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Media Bottom</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt.
+                            </p>
+                        </div>
+                        <div class="uk-card-media-bottom uk-padding-small">
+                            <img
+                                src="images/tm1.jpg"
+                                width="1800"
+                                height="1200"
+                                alt=""
+                            />
+                        </div>
+                        <div class="uk-card-footer">
+                            <a href="#" class="uk-button uk-button-text"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top uk-padding-small">
+                            <img
+                                src="images/tm7.jpg"
+                                width="1800"
+                                height="1200"
+                                alt=""
+                            />
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Media Top</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt.ratione mollitia eaque, soluta
+                                doloremque quidem. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Dolorem nam
+                                tempore quo itaque illo sunt porro commodi
+                                quisquam pariatur neque unde nulla odit
+                                recusandae velit, expedita esse! Minima, quod
+                                tempora. Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <a href="#" class="uk-button uk-button-text"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Media Bottom</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt.
+                            </p>
+                        </div>
+                        <div class="uk-card-media-bottom uk-padding-small">
+                            <img
+                                src="images/tm9.jpg"
+                                width="1800"
+                                height="1200"
+                                alt=""
+                            />
+                        </div>
+                        <div class="uk-card-footer">
+                            <a href="#" class="uk-button uk-button-text"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top uk-padding-small">
+                            <img
+                                src="images/tm5.jpg"
+                                width="1800"
+                                height="1200"
+                                alt=""
+                            />
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Media Top</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt.
+                            </p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <a href="#" class="uk-button uk-button-text"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top uk-padding-small">
+                            <img
+                                src="images/course11.jpg"
+                                width="1800"
+                                height="1200"
+                                alt=""
+                            />
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Media Top</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt.
+                            </p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <a href="#" class="uk-button uk-button-text"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Heading</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt.ratione mollitia eaque, soluta
+                                doloremque quidem. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Dolorem nam
+                                tempore quo itaque illo sunt porro commodi
+                                quisquam pariatur neque unde nulla odit
+                                recusandae velit, expedita esse! Minima, quod
+                                tempora. Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <a href="#" class="uk-button uk-button-text"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Heading</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt.ratione mollitia eaque, soluta
+                                doloremque quidem. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <a href="#" class="uk-button uk-button-text"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Heading</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt.ratione mollitia eaque, soluta
+                                doloremque quidem. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Dolorem nam
+                                tempore quo itaque illo sunt porro commodi
+                                quisquam pariatur neque unde nulla odit
+                                recusandae velit, expedita esse! Minima, quod
+                                tempora. Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Dolorem nam tempore quo itaque
+                                illo sunt porro commodi quisquam pariatur neque
+                                unde nulla odit recusandae velit, expedita esse!
+                                Minima, quod tempora. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <a href="#" class="uk-button uk-button-text"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
             <table id="dataTable" class="uk-table"></table>
         </div>
 
