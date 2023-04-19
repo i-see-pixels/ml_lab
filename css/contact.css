@@ -1,17 +1,102 @@
 .icon {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
-/* .uk-logo img {
-    display: block;
-    max-height: 3rem;
-    margin-right: 1.5rem;
-} */
 
-
-.contact-container {
+.contact_container {
+    background-color: rgb(60, 50, 137);
     padding: 4rem;
     display: grid;
     grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+.contact_aside {
+    background-color: rgb(21, 47, 152);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 10rem;
+}
+
+.aside_img {
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+
+.contact_aside h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact_aside ul {
+    list-style: none;
+}
+
+.contact_details li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    /* margin-bottom: 1rem; */
+}
+
+.contact_details h5 {
+    margin: 0.5rem;
+    /* padding-bottom: 1rem; */
+}
+
+.contact_socials {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 3rem;
+}
+
+.contact_socials a {
+    background-color: rgba(8, 26, 97, 0.785);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.contact_socials a:hover {
+    background: transparent;
+}
+
+
+
+
+/* =============== CONTACT FORM ==============*/
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+
+.form_name {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.contact_form input[type="text"] {
+    width: 50%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    color: #fff;
+    background: rgb(22, 22, 111);
+}
+
+.contact_form .uk-btn-danger {
+    background-color: red;
+    width: max-content;
+    margin-top: 1rem;
+    cursor: pointer;
 }
