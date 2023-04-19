@@ -1,0 +1,17 @@
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* .uk-logo img {
+    display: block;
+    max-height: 3rem;
+    margin-right: 1.5rem;
+} */
+
+
+.contact-container {
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}

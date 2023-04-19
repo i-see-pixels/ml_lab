@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- <link rel="stylesheet" href="../css/style.css" /> -->
+        <link rel="stylesheet" href="../css/style.css" />
         <link rel="stylesheet" href="../css/about.css" />
 
-        <title>About</title>
+        <!-- UIkit CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css"
+        />
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
+            integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <title>ML Lab</title>
     </head>
     <body>
+        <!-- Navbar -->
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+                <div uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a
+                            class="uk-navbar-item uk-logo"
+                            href="../index.html"
+                            aria-label="Back to Home"
+                        >
+                            <img src="../images/DTU.png" alt="DTU_Logo" />
+                            Machine Learning Lab
+                        </a>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../pages/about.html">About Us</a></li>
+                            <li>
+                                <a href="../pages/publications.html"
+                                    >Publications</a
+                                >
+                            </li>
+                            <li><a href="#">Research</a></li>
+                            <li>
+                                <a href="../pages/contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
         <!-- Start of achievements section -->
         <section class="about_achievements">
             <div class="container about_achievements-container">
@@ -36,7 +86,7 @@
                             <span class="achievement_icon">
                                 <img
                                     class="icon"
-                                    src="images/icon/analysis.png"
+                                    src="../images/icon/analysis.png"
                                     alt=""
                                 />
                             </span>
@@ -48,7 +98,7 @@
                             <span class="achievement_icon">
                                 <img
                                     class="icon"
-                                    src="images/icon/education.png"
+                                    src="../images/icon/education.png"
                                     alt=""
                                 />
                             </span>
@@ -60,7 +110,7 @@
                             <span class="achievement_icon">
                                 <img
                                     class="icon"
-                                    src="images/icon/medal.png"
+                                    src="../images/icon/medal.png"
                                     alt=""
                                 />
                             </span>
@@ -79,7 +129,7 @@
             <div class="container team_container">
                 <article class="team_member">
                     <div class="team_member-img">
-                        <img src="./images/tm1.jpg" alt="" />
+                        <img src="../images/tm1.jpg" alt="" />
                     </div>
                     <div class="team_member-info">
                         <h4>Team member Name</h4>
@@ -89,21 +139,21 @@
                     <div class="team_member-socials">
                         <a href="https://www.linkedin.com/">
                             <img
-                                src="./images/icon/linkedin.svg"
+                                src="../images/icon/linkedin.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.facebook.com/">
                             <img
-                                src="./images/icon/facebook.svg"
+                                src="../images/icon/facebook.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.medium.com/">
                             <img
-                                src="./images/icon/medium.svg"
+                                src="../images/icon/medium.svg"
                                 alt=""
                                 class="icon"
                             />
@@ -111,9 +161,10 @@
                     </div>
                 </article>
 
+                
                 <article class="team_member">
                     <div class="team_member-img">
-                        <img src="./images/tm2.jpg" alt="" />
+                        <img src="../images/tm1.jpg" alt="" />
                     </div>
                     <div class="team_member-info">
                         <h4>Team member Name</h4>
@@ -123,21 +174,21 @@
                     <div class="team_member-socials">
                         <a href="https://www.linkedin.com/">
                             <img
-                                src="./images/icon/linkedin.svg"
+                                src="../images/icon/linkedin.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.facebook.com/">
                             <img
-                                src="./images/icon/facebook.svg"
+                                src="../images/icon/facebook.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.medium.com/">
                             <img
-                                src="./images/icon/medium.svg"
+                                src="../images/icon/medium.svg"
                                 alt=""
                                 class="icon"
                             />
@@ -145,9 +196,10 @@
                     </div>
                 </article>
 
+                
                 <article class="team_member">
                     <div class="team_member-img">
-                        <img src="./images/tm3.jpg" alt="" />
+                        <img src="../images/tm1.jpg" alt="" />
                     </div>
                     <div class="team_member-info">
                         <h4>Team member Name</h4>
@@ -157,21 +209,21 @@
                     <div class="team_member-socials">
                         <a href="https://www.linkedin.com/">
                             <img
-                                src="./images/icon/linkedin.svg"
+                                src="../images/icon/linkedin.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.facebook.com/">
                             <img
-                                src="./images/icon/facebook.svg"
+                                src="../images/icon/facebook.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.medium.com/">
                             <img
-                                src="./images/icon/medium.svg"
+                                src="../images/icon/medium.svg"
                                 alt=""
                                 class="icon"
                             />
@@ -179,9 +231,10 @@
                     </div>
                 </article>
 
+                
                 <article class="team_member">
                     <div class="team_member-img">
-                        <img src="./images/tm4.jpg" alt="" />
+                        <img src="../images/tm1.jpg" alt="" />
                     </div>
                     <div class="team_member-info">
                         <h4>Team member Name</h4>
@@ -191,21 +244,21 @@
                     <div class="team_member-socials">
                         <a href="https://www.linkedin.com/">
                             <img
-                                src="./images/icon/linkedin.svg"
+                                src="../images/icon/linkedin.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.facebook.com/">
                             <img
-                                src="./images/icon/facebook.svg"
+                                src="../images/icon/facebook.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.medium.com/">
                             <img
-                                src="./images/icon/medium.svg"
+                                src="../images/icon/medium.svg"
                                 alt=""
                                 class="icon"
                             />
@@ -213,9 +266,10 @@
                     </div>
                 </article>
 
+                
                 <article class="team_member">
                     <div class="team_member-img">
-                        <img src="./images/tm5.jpg" alt="" />
+                        <img src="../images/tm1.jpg" alt="" />
                     </div>
                     <div class="team_member-info">
                         <h4>Team member Name</h4>
@@ -225,21 +279,21 @@
                     <div class="team_member-socials">
                         <a href="https://www.linkedin.com/">
                             <img
-                                src="./images/icon/linkedin.svg"
+                                src="../images/icon/linkedin.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.facebook.com/">
                             <img
-                                src="./images/icon/facebook.svg"
+                                src="../images/icon/facebook.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.medium.com/">
                             <img
-                                src="./images/icon/medium.svg"
+                                src="../images/icon/medium.svg"
                                 alt=""
                                 class="icon"
                             />
@@ -247,9 +301,10 @@
                     </div>
                 </article>
 
+                
                 <article class="team_member">
                     <div class="team_member-img">
-                        <img src="./images/tm6.jpg" alt="" />
+                        <img src="../images/tm1.jpg" alt="" />
                     </div>
                     <div class="team_member-info">
                         <h4>Team member Name</h4>
@@ -259,21 +314,21 @@
                     <div class="team_member-socials">
                         <a href="https://www.linkedin.com/">
                             <img
-                                src="./images/icon/linkedin.svg"
+                                src="../images/icon/linkedin.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.facebook.com/">
                             <img
-                                src="./images/icon/facebook.svg"
+                                src="../images/icon/facebook.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.medium.com/">
                             <img
-                                src="./images/icon/medium.svg"
+                                src="../images/icon/medium.svg"
                                 alt=""
                                 class="icon"
                             />
@@ -281,9 +336,10 @@
                     </div>
                 </article>
 
+                
                 <article class="team_member">
                     <div class="team_member-img">
-                        <img src="./images/tm7.jpg" alt="" />
+                        <img src="../images/tm1.jpg" alt="" />
                     </div>
                     <div class="team_member-info">
                         <h4>Team member Name</h4>
@@ -293,21 +349,21 @@
                     <div class="team_member-socials">
                         <a href="https://www.linkedin.com/">
                             <img
-                                src="./images/icon/linkedin.svg"
+                                src="../images/icon/linkedin.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.facebook.com/">
                             <img
-                                src="./images/icon/facebook.svg"
+                                src="../images/icon/facebook.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.medium.com/">
                             <img
-                                src="./images/icon/medium.svg"
+                                src="../images/icon/medium.svg"
                                 alt=""
                                 class="icon"
                             />
@@ -315,9 +371,10 @@
                     </div>
                 </article>
 
+                
                 <article class="team_member">
                     <div class="team_member-img">
-                        <img src="./images/tm8.jpg" alt="" />
+                        <img src="../images/tm1.jpg" alt="" />
                     </div>
                     <div class="team_member-info">
                         <h4>Team member Name</h4>
@@ -327,21 +384,21 @@
                     <div class="team_member-socials">
                         <a href="https://www.linkedin.com/">
                             <img
-                                src="./images/icon/linkedin.svg"
+                                src="../images/icon/linkedin.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.facebook.com/">
                             <img
-                                src="./images/icon/facebook.svg"
+                                src="../images/icon/facebook.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.medium.com/">
                             <img
-                                src="./images/icon/medium.svg"
+                                src="../images/icon/medium.svg"
                                 alt=""
                                 class="icon"
                             />
@@ -349,9 +406,10 @@
                     </div>
                 </article>
 
+                
                 <article class="team_member">
                     <div class="team_member-img">
-                        <img src="./images/tm9.jpg" alt="" />
+                        <img src="../images/tm1.jpg" alt="" />
                     </div>
                     <div class="team_member-info">
                         <h4>Team member Name</h4>
@@ -361,21 +419,21 @@
                     <div class="team_member-socials">
                         <a href="https://www.linkedin.com/">
                             <img
-                                src="./images/icon/linkedin.svg"
+                                src="../images/icon/linkedin.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.facebook.com/">
                             <img
-                                src="./images/icon/facebook.svg"
+                                src="../images/icon/facebook.svg"
                                 alt=""
                                 class="icon"
                             />
                         </a>
                         <a href="https://www.medium.com/">
                             <img
-                                src="./images/icon/medium.svg"
+                                src="../images/icon/medium.svg"
                                 alt=""
                                 class="icon"
                             />

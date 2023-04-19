@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- <link rel="stylesheet" href="../css/style.css" /> -->
+        <link rel="stylesheet" href="../css/contact.css">
+
+        <!-- UIkit CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css"
+        />
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
+            integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <title>ML Lab</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+                <div uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a
+                            class="uk-navbar-item uk-logo"
+                            href="../index.html"
+                            aria-label="Back to Home"
+                        >
+                            <img src="../images/DTU.png" alt="DTU_Logo" />
+                            Machine Learning Lab
+                        </a>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../pages/about.html">About Us</a></li>
+                            <li>
+                                <a href="../pages/publications.html"
+                                    >Publications</a
+                                >
+                            </li>
+                            <li><a href="#">Research</a></li>
+                            <li>
+                                <a href="../pages/contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>        
+
+
+        <section class="contact">
+            <div class="container contact_container">
+                <aside class="contact_aside">
+                    <div class="aside_image">
+                        <img src="../images/contact.svg" alt="">
+                    </div>
+                    <h2>Contact Us</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quos non assumenda nobis explicabo obcaecati animi consequatur eaque minima ex!
+                    </p>
+                    <ul class="contact_details">
+                        <li>
+                            <img src="../images/icon/phone.svg" alt="" class="icon">
+                            <h5>Office_number</h5>
+                        </li>
+                        <li>
+                            <img src="../images/icon/mail.svg" alt="" class="icon">
+                            <h5>Office_email</h5>
+                        </li>
+                        <li>
+                            <img src="../images/icon/location.svg" alt="" class="icon">
+                            <h5>Office_location</h5>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/">
+                                <img
+                                    src="../images/icon/linkedin.svg"
+                                    alt=""
+                                    class="icon"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/">
+                                <img
+                                    src="../images/icon/facebook.svg"
+                                    alt=""
+                                    class="icon"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.medium.com/">
+                                <img
+                                    src="../images/icon/medium.svg"
+                                    alt=""
+                                    class="icon"
+                                />
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <form>
+                    <div class="form_name">
+                        <input type="text" name="fname" placeholder="First Name" required>
+                        <input type="text" name="fname" placeholder="Last Name" required>
+                    </div>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <textarea name="message" placeholder="Write your message" rows="7" required></textarea>
+                    <button class="uk-button uk-button-danger">Send Message</button>
+                </form>
+            </div>
+        </section>
+        
+    </body>
+</html>

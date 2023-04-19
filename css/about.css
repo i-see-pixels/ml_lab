@@ -1,5 +1,17 @@
 /* ============= Achivements =========== */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
 
+:root {
+    --transition: all 400ms ease;
+}
 
 .icon {
     width: 24px;
@@ -92,7 +104,7 @@
     border: 1px solid transparent;
     transition: var(--transition);
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .team_member:hover {
