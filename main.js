@@ -13,17 +13,17 @@ async function readFile() {
         // console.log(jsonData[1][0]);
 
         // Display the data in a table
-        const dataTable = document.getElementById("dataTable");
-        dataTable.innerHTML = "";
-        jsonData.forEach((row) => {
-            const tr = document.createElement("tr");
-            row.forEach((cell) => {
-                const td = document.createElement("td");
-                td.textContent = cell;
-                tr.appendChild(td);
-            });
-            dataTable.appendChild(tr);
-        });
+        // const dataTable = document.getElementById("dataTable");
+        // dataTable.innerHTML = "";
+        // jsonData.forEach((row) => {
+        //     const tr = document.createElement("tr");
+        //     row.forEach((cell) => {
+        //         const td = document.createElement("td");
+        //         td.textContent = cell;
+        //         tr.appendChild(td);
+        //     });
+        //     dataTable.appendChild(tr);
+        // });
     } catch (error) {
         console.error(error);
     }

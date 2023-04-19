@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="publications.css" />
 
         <!-- UIkit CSS -->
         <link
@@ -53,65 +54,10 @@
             </div>
         </nav>
 
-        <div id="data"></div>
-        <div id="pagination"></div>
-
-        <script>
-            const jsonData = [
-                { id: 1, name: "John" },
-                { id: 2, name: "Jane" },
-                { id: 3, name: "Bob" },
-                { id: 4, name: "Alice" },
-                { id: 5, name: "Eve" },
-                { id: 6, name: "Alex" },
-                { id: 7, name: "Dan" },
-                { id: 8, name: "Sara" },
-                { id: 9, name: "Tom" },
-                { id: 10, name: "Tim" },
-            ];
-
-            function displayData(pageNum) {
-                const itemsPerPage = 3;
-                const startIndex = (pageNum - 1) * itemsPerPage;
-                const endIndex = startIndex + itemsPerPage;
-                const data = jsonData.slice(startIndex, endIndex);
-
-                const dataHtml = data
-                    .map((item) => {
-                        return `<div>${item.id} - ${item.name}</div>`;
-                    })
-                    .join("");
-
-                document.getElementById("data").innerHTML = dataHtml;
-            }
-
-            function displayPagination() {
-                const itemsPerPage = 3;
-                const totalPages = Math.ceil(jsonData.length / itemsPerPage);
-
-                const paginationHtml = Array.from(
-                    { length: totalPages },
-                    (_, i) => {
-                        return `<button>${i + 1}</button>`;
-                    }
-                ).join("");
-
-                document.getElementById("pagination").innerHTML =
-                    paginationHtml;
-
-                document
-                    .querySelectorAll("#pagination button")
-                    .forEach((button) => {
-                        button.addEventListener("click", () => {
-                            const pageNum = parseInt(button.textContent);
-                            displayData(pageNum);
-                        });
-                    });
-
-                displayData(1);
-            }
-
-            displayPagination();
-        </script>
+        <div class="uk-container">
+            <div id="data"></div>
+            <div id="pagination"></div>
+        </div>
+        <script src="publications.js"></script>
     </body>
 </html>
