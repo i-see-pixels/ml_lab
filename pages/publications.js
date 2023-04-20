@@ -152,7 +152,28 @@ const displayData = (pageNum, itemsPerPage, jsonData) => {
 
     const dataHtml = data
         .map((item) => {
-            return `<div>${item[0]} - ${item[1]}</div>`;
+            return `
+            <div>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">${item[0]}</h3>
+                        <h5 class="">
+                            ${item[1]}
+                        </h5>
+                        <p class="uk-text-meta">
+                            ${item[2]}
+                        </p>
+                    </div>
+                    <div class="uk-card-footer">
+                        <a
+                            href="${item[3]}"
+                            class="uk-button uk-button-text uk-text-primary"
+                            ><span class="uk-margin-small-right" uk-icon="link"></span>${item[4]}</a
+                        >
+                    </div>
+                </div>
+            </div>
+            `;
         })
         .join("");
 
