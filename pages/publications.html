@@ -66,8 +66,14 @@
                     <h2 class="uk-text-uppercase">Publications</h2>
                 </div>
             </div>
-            <div id="data" class="uk-grid-small uk-margin-bottom" uk-grid></div>
-            <div id="pagination"></div>
+            <div class="pagination"></div>
+            <div
+                id="data"
+                class="uk-grid-small uk-margin-top"
+                uk-grid
+                uk-scrollspy="cls: uk-animation-slide-right; target: .uk-card; delay: 150; repeat:true; margin:10%"
+            ></div>
+            <div class="pagination"></div>
         </div>
         <script src="publications.js"></script>
     </body>

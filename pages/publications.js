@@ -211,7 +211,7 @@ readFile(publicationsPath).then((jsonData) => {
         jsonData
     );
 
-    paginationButtons.render(document.querySelector("#pagination"));
+    paginationButtons.render(document.querySelector(".pagination"));
 
     paginationButtons.onChange((e) => {
         console.log("-- changed", e.target.value);
