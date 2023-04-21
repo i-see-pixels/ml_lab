@@ -91,7 +91,7 @@
 input, textarea {
     width: 100%;
     padding: 1rem;
-    color: #fff;
+    color: #000;
     background: rgba(232, 235, 241, 0.998);
 }
 
@@ -105,7 +105,48 @@ input, textarea {
 
 /* =========== Media quiries =========== */
 @media screen and (max-width: 1024px) {
-    contact {
-        padding: ;
+    .contact {
+        padding-bottom: 0;
+    }
+
+    .contact_container {
+        gap: 1.5rem;
+        margin-top: 6rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+    
+    .contact_aside {
+        width: auto;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+    
+    .contact_form {
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+}
+
+
+/* =========== Media quiries =========== */
+@media screen and (max-width: 600px) {
+    .contact_container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .contact_form {
+        margin: 0 1.5rem 3rem;
+    }
+
+    .form_name {
+        flex-direction: column;
+    }
+
+    .form_name input[type="text"] {
+        width: 100%;
     }
 }
