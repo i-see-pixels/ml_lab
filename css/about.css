@@ -14,8 +14,8 @@
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
+    width: 3rem;
+    height: 3rem;
 }
 
 .about_achievements-left-image {
@@ -30,7 +30,7 @@
 .about_achievements-container {
     display: grid;
     grid-template-columns: 40% 60%;
-    gap: 5rem;
+    /* gap: 5rem; */
 }
 
 .about_achievements-right > p {
@@ -44,8 +44,8 @@
 }
 
 .achievement_card {
-    background: rgb(41, 30, 132);
-    padding: 1.6rem;
+    background: rgb(143, 142, 152);
+    padding: 1rem;
     border-radius: 1rem;
     text-align: center;
 }

@@ -5,18 +5,19 @@
 
 
 .contact_container {
-    background-color: rgb(60, 50, 137);
+    margin: 10rem 5rem 0rem 5rem;
+    background-color: rgb(201, 202, 208);
     padding: 4rem;
     display: grid;
     grid-template-columns: 40% 60%;
     gap: 4rem;
     height: 30rem;
-    margin: 7rem auto;
     border-radius: 1rem;
+    position: absolute;
 }
 
 .contact_aside {
-    background-color: rgb(21, 47, 152);
+    background-color: rgba(232, 235, 241, 0.998);
     padding: 3rem;
     border-radius: 1rem;
     position: relative;
@@ -41,12 +42,12 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    /* margin-bottom: 1rem; */
+    margin-bottom: 1rem;
 }
 
 .contact_details h5 {
     margin: 0.5rem;
-    /* padding-bottom: 1rem; */
+    padding-bottom: 1rem;
 }
 
 .contact_socials {
@@ -56,7 +57,7 @@
 }
 
 .contact_socials a {
-    background-color: rgba(8, 26, 97, 0.785);
+    background-color: rgba(160, 166, 193, 0.785);
     padding: 0.5rem;
     border-radius: 50%;
     font-size: 0.9rem;
@@ -91,12 +92,20 @@ input, textarea {
     width: 100%;
     padding: 1rem;
     color: #fff;
-    background: rgb(22, 22, 111);
+    background: rgba(232, 235, 241, 0.998);
 }
 
 .contact_form .uk-btn-danger {
-    background-color: red;
+    background-color: rgb(54, 27, 27);
     width: max-content;
     margin-top: 1rem;
     cursor: pointer;
+}
+
+
+/* =========== Media quiries =========== */
+@media screen and (max-width: 1024px) {
+    contact {
+        padding: ;
+    }
 }
