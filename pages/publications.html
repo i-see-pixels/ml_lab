@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="stylesheet" href="../css/style.css" />
-        <link rel="stylesheet" href="publications.css" />
+        <link rel="stylesheet" href="../css/publications.css" />
 
         <!-- UIkit CSS -->
         <link
@@ -62,19 +62,72 @@
 
         <div class="uk-container uk-padding-small">
             <div class="uk-card uk-card-default uk-margin-bottom">
-                <div class="uk-card-body">
-                    <h2 class="uk-text-uppercase">Publications</h2>
+                <div
+                    class="uk-card-body uk-flex uk-flex-between uk-padding-small uk-flex-row uk-flex-center uk-flex-middle"
+                >
+                    <h2 class="uk-text-uppercase publications-head">
+                        Publications
+                    </h2>
+                    <div class="uk-search uk-search-default">
+                        <span class="uk-search-icon-flip" uk-search-icon></span>
+                        <input
+                            class="uk-search-input"
+                            id="publications-search"
+                            type="text"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                    </div>
                 </div>
             </div>
-            <div class="pagination"></div>
+            <!-- <div class="pagination"></div> -->
             <div
                 id="data"
-                class="uk-grid-small uk-margin-top"
+                class="uk-grid-small uk-margin-top uk-margin-bottom uk-child-width-1-1"
                 uk-grid
-                uk-scrollspy="cls: uk-animation-slide-right; target: .uk-card; delay: 150; repeat:true; margin:10%"
+                uk-scrollspy="cls: uk-animation-slide-right; target: .uk-card; delay: 150; repeat:false; margin:10%"
+                uk-height-viewport="min-height: 1000"
             ></div>
             <div class="pagination"></div>
         </div>
+
+        <!-- Footer -->
+        <footer
+            class="uk-section uk-section-secondary uk-light uk-margin-large-top uk-position-relative uk-position-bottom"
+        >
+            <div class="uk-container">
+                <div class="uk-grid-match uk-child-width-1-2@s" uk-grid>
+                    <div>
+                        <h3>Footer</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt.ratione
+                            mollitia eaque, soluta doloremque quidem. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit.
+                            Dolorem nam tempore quo itaque illo sunt porro
+                            commodi quisquam pariatur neque unde nulla odit
+                            recusandae velit, expedita esse! Minima, quod
+                            tempora. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Footer</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt.ratione
+                            mollitia eaque, soluta doloremque quidem. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit.
+                            Dolorem nam tempore quo itaque illo sunt porro
+                            commodi quisquam pariatur neque unde nulla odit
+                            recusandae velit, expedita esse! Minima, quod
+                            tempora. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
         <script src="publications.js"></script>
     </body>
 </html>

@@ -1,3 +1,5 @@
+const searchInput = document.getElementById("publications-search");
+
 const pageNumbers = (total, max, current) => {
     const half = Math.floor(max / 2);
     let to = max;
@@ -131,7 +133,15 @@ function PaginationButton(
     paginationButtonContainer.appendChild(frag);
 
     this.render = (container = document.body) => {
-        container.appendChild(paginationButtonContainer);
+        console.log("Child ", container.children.length);
+        if (container.children.length === 0)
+            container.appendChild(paginationButtonContainer);
+        else {
+            container.replaceChild(
+                paginationButtonContainer,
+                container.lastChild
+            );
+        }
     };
 
     this.update = (newPageNumber = currentPage) => {
@@ -154,7 +164,7 @@ const displayData = (pageNum, itemsPerPage, jsonData) => {
         .map((item) => {
             return `
             <div>
-                <div class="uk-card uk-card-default">
+                <div class="uk-card uk-card-default ">
                     <div class="uk-card-body">
                         <h3 class="uk-card-title">${item[0]}</h3>
                         <h5 class="">
@@ -180,8 +190,25 @@ const displayData = (pageNum, itemsPerPage, jsonData) => {
     document.getElementById("data").innerHTML = dataHtml;
 };
 
+const search = (jsonData, query) => {
+    if (query === "") return jsonData;
+
+    const filteredData = jsonData.filter((item) => {
+        const values = Object.values(item);
+        for (let i = 0; i < values.length; i++) {
+            const str = String(values[i]).toLowerCase();
+            if (str.includes(query.toLowerCase())) {
+                return true;
+            }
+        }
+        return false;
+    });
+
+    return filteredData;
+};
+
 let publicationsPath = "../data/publications.xlsx";
-async function readFile(path) {
+async function readFile(path, query = "") {
     try {
         // Load the XLSX file using fetch
         const response = await fetch(path);
@@ -190,32 +217,45 @@ async function readFile(path) {
         // Parse the XLSX file
         const workbook = XLSX.read(data, { type: "arraybuffer" });
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-        const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-        return jsonData;
+        const jsonData = XLSX.utils
+            .sheet_to_row_object_array(worksheet, { header: 1 })
+            .slice(1);
+        const filteredData = search(jsonData, query);
+
+        // console.log(filteredData);
+
+        // jsonData.forEach((item) => console.log(item));
+        const itemsPerPage = 5;
+        const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+        const paginationButtons = new PaginationButton(
+            totalPages,
+            5,
+            1,
+            itemsPerPage,
+            filteredData
+        );
+
+        paginationButtons.render(document.querySelector(".pagination"));
+
+        paginationButtons.onChange((e) => {
+            console.log("-- changed", e.target.value);
+
+            displayData(e.target.value, itemsPerPage, filteredData);
+        });
     } catch (error) {
         console.error(error);
     }
 }
 
-readFile(publicationsPath).then((jsonData) => {
-    console.log(jsonData);
-    const itemsPerPage = 5;
-    const totalPages = Math.ceil(jsonData.length / itemsPerPage);
-    // const currData = jsonData.slice(0, limitPerPage);
+readFile(publicationsPath);
 
-    const paginationButtons = new PaginationButton(
-        totalPages,
-        5,
-        1,
-        itemsPerPage,
-        jsonData
-    );
-
-    paginationButtons.render(document.querySelector(".pagination"));
-
-    paginationButtons.onChange((e) => {
-        console.log("-- changed", e.target.value);
-
-        displayData(e.target.value, itemsPerPage, jsonData);
-    });
+searchInput.addEventListener("input", (event) => {
+    const searchTerm = event.target.value;
+    console.log(searchTerm);
+    if (searchTerm !== "") {
+        readFile(publicationsPath, searchTerm);
+    } else {
+        readFile(publicationsPath);
+    }
 });

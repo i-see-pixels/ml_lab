@@ -57,3 +57,7 @@ button {
 .page-btn[disabled] {
     opacity: 0.3;
 }
+
+.publications-head {
+    margin: 0 !important;
+}
