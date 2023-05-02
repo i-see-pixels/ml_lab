@@ -66,8 +66,8 @@ body {
     width: 30px;
     border: 2px solid wheat;
     position: absolute;
-    left: 50%;
-    bottom: 20px;
+    /* left: 50%; */
+    bottom: 50px;
     border-radius: 50px;
     cursor: pointer;
 }

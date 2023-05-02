@@ -1,5 +1,5 @@
 /* ============= Achivements =========== */
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -75,13 +75,11 @@
     height: 3rem;
 }
 
-.achievement_card:nth-child(2) 
-.achievement_icon {
+.achievement_card:nth-child(2) .achievement_icon {
     background: yellow;
 }
 
-.achievement_card:nth-child(3) 
-.achievement_icon {
+.achievement_card:nth-child(3) .achievement_icon {
     background: green;
 }
 
@@ -89,21 +87,9 @@
     margin-top: 1rem;
 }
 
-
-
-
-
 /* ============= Team =========== */
 
-
-
-
-.team {
-    background: rgba(213, 212, 218, 0.873);
-    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
-}
-
-.team>h2 {
+.team > h2 {
     padding-top: 5rem;
     padding-bottom: 1rem;
     text-align: center;
@@ -117,7 +103,7 @@
 }
 
 .team_member {
-    background:rgb(99, 99, 242);
+    background: rgb(99, 99, 242);
     padding: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
@@ -125,7 +111,7 @@
     overflow: hidden;
 }
 
-.team_member-info>h4{
+.team_member-info > h4 {
     color: #fff;
 }
 
@@ -148,7 +134,7 @@
 }
 
 .team_member-info p {
-    color:aliceblue;
+    color: aliceblue;
 }
 
 .team_member-socials {
@@ -177,7 +163,6 @@
     height: 1.5rem;
 }
 
-
 /* ============= MEDIA QUERIES (TABLETS) =========== */
 @media screen and (max-width: 1024px) {
     .about_achievements {
@@ -203,10 +188,6 @@
         padding: 1rem;
     }
 }
-
-
-
-
 
 /* ============= MEDIA QUERIES (TABLETS) =========== */
 @media screen and (max-width: 600px) {

@@ -18,31 +18,77 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="uk-navbar-container">
+        <nav class="uk-navbar-container" uk-sticky>
             <div class="uk-container">
                 <div uk-navbar>
-                    <div class="uk-navbar-left uk-visible@l">
+                    <div class="uk-navbar-left">
                         <a
-                            class="uk-navbar-item uk-logo"
+                            class="uk-navbar-item uk-logo uk-flex uk-flex-center uk-flex-middle"
                             href="../index.html"
                             aria-label="Back to Home"
                         >
-                            <img src="../images/DTU.png" alt="DTU_Logo" />
-                            Machine Learning Lab
+                            <img
+                                src="../images/DTU.png"
+                                class="uk-margin-remove uk-margin-right@m"
+                                alt="DTU_Logo"
+                            />
+                            <span
+                                class="uk-text-default uk-text-uppercase uk-text-large@m"
+                                >Machine Learning Laboratory</span
+                            >
                         </a>
                     </div>
                     <div class="uk-navbar-right">
-                        <ul class="uk-navbar-nav">
+                        <ul class="uk-navbar-nav uk-visible@m">
                             <li><a href="../index.html">Home</a></li>
                             <li><a href="./about.html">About Us</a></li>
                             <li>
                                 <a href="./publications.html">Publications</a>
                             </li>
-                            <li><a href="./research.html">Research</a></li>
+                            <li>
+                                <a href="./research.html">Research</a>
+                            </li>
                             <li>
                                 <a href="./contact.html">Contact Us</a>
                             </li>
                         </ul>
+                        <div class="uk-hidden@m">
+                            <button
+                                class="uk-icon-link"
+                                uk-icon="menu"
+                                uk-toggle="target:#offcanvas-bar"
+                            ></button>
+                        </div>
+                        <div
+                            id="offcanvas-bar"
+                            uk-offcanvas="overlay:true; flip:true; mode:reveal"
+                        >
+                            <div class="uk-offcanvas-bar">
+                                <button
+                                    class="uk-offcanvas-close"
+                                    uk-close
+                                ></button>
+                                <ul
+                                    class="uk-navbar-nav uk-flex uk-flex-column"
+                                >
+                                    <li><a href="../index.html">Home</a></li>
+                                    <li>
+                                        <a href="./about.html">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="./publications.html"
+                                            >Publications</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="./research.html">Research</a>
+                                    </li>
+                                    <li>
+                                        <a href="./contact.html">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
