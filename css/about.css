@@ -139,7 +139,7 @@
 
 .team_member-socials {
     position: absolute;
-    top: 30%;
+    top: 11rem;
     transform: translate(-50%);
     right: -100%;
     display: flex;
@@ -154,8 +154,12 @@
     padding: 1rem;
 }
 
+.team_member:hover .team_member-info > h4, .team_member:hover .team_member-info > p {
+    color: black;
+}
+
 .team_member:hover .team_member-socials {
-    right: -15%;
+    right: -2rem;
 }
 
 .team_member .icon {
@@ -180,7 +184,7 @@
     }
 
     .team_container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
 
