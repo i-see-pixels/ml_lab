@@ -66,7 +66,11 @@ function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-const phrases = ["Machine Learning", "Computer Vision"];
+const phrases = [
+    "Machine Learning",
+    "Computer Vision",
+    "Artificial Intelligence",
+];
 const el = document.getElementById("typewriter");
 
 let sleepTime = 100;

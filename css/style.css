@@ -2,6 +2,7 @@
     --bg-color: hsl(49 37% 94%);
     --typewriterSpeed: 6s;
     --typewriterCharacters: 24;
+    --uk-text-primary: #6c63ff;
 }
 
 *,
@@ -124,4 +125,13 @@ body {
     50% {
         opacity: 0%;
     }
+}
+
+ul li a {
+    font-weight: bold;
+    color: black !important;
+}
+
+ul li a:hover {
+    color: #6c63ff !important;
 }
